@@ -2,6 +2,7 @@ import { ClientesService } from '../service/clientes.service';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,9 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, RouterLink],
 })
 export class HomePage {
-  constructor(private clientesService: ClientesService) {}
+  constructor(private clientesService: ClientesService) {
+    this.buscarClientes();
+  }
 
   buscarClientes(){
     this.clientesService.getAll().subscribe(dados =>{
