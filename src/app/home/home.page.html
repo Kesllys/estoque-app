@@ -7,18 +7,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item *ngFor="let cliente of listaClientes">
+    <ion-label>
+      <h1>{{cliente.nome}}</h1>
+      <a href="maito:{{cliente.email}}">{{cliente.email}}</a>
+    </ion-label>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-
-  <div *ngFor="let cliente of buscarClientes();index as i;first as isFirst">
-    <h1>{{cliente.nome}}</h1>
-  </div>
+  <ion-button routerLink="/create-cliente">
+    Adicionar Cliente
+  </ion-button>
 </ion-content>
