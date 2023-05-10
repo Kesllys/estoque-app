@@ -1,4 +1,4 @@
-import { ClientesService } from '../service/clientes.service';
+import { ClientesService } from '../services/clientes.service';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';

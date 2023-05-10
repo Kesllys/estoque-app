@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { Cliente } from '../models/Cliente.model';
+import { Cliente } from '../models/cliente.model';
 import { ClientesService } from '../services/clientes.service';
 import { Router } from '@angular/router';
 
